@@ -1,0 +1,10 @@
+# profile
+spring:
+#  profiles:
+#    active: dev
+  profiles:
+    # 选择环境
+    active: @activatedProperties@
+# logback
+logging:
+  config: classpath:log/logback-${spring.profiles.active}.xml
